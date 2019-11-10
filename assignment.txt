@@ -1,0 +1,33 @@
+# exercise4_DOM 
+<!DOCTYPE html>
+<html>
+	<head>
+	<title> Simple Input Output </title>
+	</head>
+<body>
+<form id="formm" action="/action_page.php">
+	First name: <input type="text" name="firstN" value=""> 
+
+<br>
+	Last name: <input type="text" name="lastN" value=""> 
+
+<br>
+</form>
+	<input type="submit" value="Submit">
+<p>Click the Button: "CLICK ME"  to display the input name </p>
+<button onclick="myFunction()"> CLICK ME </button>
+<p id="demo"></p>
+
+<script>
+	function myFunction(){
+	var x = document.getElementById("formm");
+	var text = "Good Afternoon!" ;
+	var i;
+	for (i = 0; i <x.length; i++) {
+	     text = text + x.elements[i].value+ " ";
+	}
+	document.getElementById("demo").innerHTML = text;
+	}
+</script>
+</body>
+</html>
